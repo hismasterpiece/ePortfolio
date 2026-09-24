@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ePortfolio</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>My ePortfolio</h1>
+        <p>Add your document links and organize them by year and semester.</p>
+      </header>
+
+      <section class="card">
+        <h2>Add document link</h2>
+        <form id="document-form">
+          <label for="title">Document title</label>
+          <input id="title" name="title" type="text" required />
+
+          <label for="url">Document URL</label>
+          <input id="url" name="url" type="url" placeholder="https://example.com/document" required />
+
+          <label for="category">Category path</label>
+          <input
+            id="category"
+            name="category"
+            type="text"
+            placeholder="Year 1 / Semester 1"
+            required
+          />
+
+          <button type="submit">Add to portfolio</button>
+        </form>
+      </section>
+
+      <section class="card">
+        <h2>Portfolio categories</h2>
+        <div id="portfolio-tree" class="tree"></div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
